@@ -1,5 +1,4 @@
 # Snake Game
-# 🐍 Snake Game
 
 ![Gameplay preview](assets/preview.gif)
 
