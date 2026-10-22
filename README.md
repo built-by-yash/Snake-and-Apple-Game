@@ -1,4 +1,4 @@
-# Snake Game
+# Snake and Apple Game
 
 ![Gameplay preview](assets/preview.gif)
 
