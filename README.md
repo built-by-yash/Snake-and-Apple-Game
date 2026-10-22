@@ -1,4 +1,7 @@
 # Snake Game
+# 🐍 Snake Game
+
+![Gameplay preview](assets/preview.gif)
 
 A Snake and Apple game made with Python and pygame.
 
