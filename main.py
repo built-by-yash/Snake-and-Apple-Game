@@ -9,17 +9,17 @@ from pygame.locals import (
 )
 
 # ---------------------------------------------------------------- settings
-SIZE = 40                      # one grid cell in pixels
+SIZE = 40                     
 WIDTH, HEIGHT = 1000, 800
 COLS, ROWS = WIDTH // SIZE, HEIGHT // SIZE
-FPS = 60                       # screen refresh rate
-START_DELAY = 200              # ms between snake steps at the start
-MIN_DELAY = 80                 # fastest the snake can go
-SPEEDUP_PER_APPLE = 5          # ms faster for every apple eaten
+FPS = 60                      
+START_DELAY = 200              
+MIN_DELAY = 80                 
+SPEEDUP_PER_APPLE = 5          
 BACKGROUND_COLOR = (110, 110, 5)
-WALL_COLOR = (120, 72, 52)      # brick
-WALL_DARK = (70, 40, 30)        # mortar / edges
-WALL_LIGHT = (160, 105, 80)     # top highlight
+WALL_COLOR = (120, 72, 52)      
+WALL_DARK = (70, 40, 30)        
+WALL_LIGHT = (160, 105, 80)     
 
 # resources are found relative to this file, not the terminal's folder
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -78,7 +78,7 @@ class Apple:
             if (c * SIZE, r * SIZE) not in occupied
         ]
         if not free:
-            return False           # board is completely full
+            return False           
         self.x, self.y = random.choice(free)
         return True
 
@@ -96,8 +96,8 @@ class Snake:
     def __init__(self, image):
         self.image = image
         self.direction = 'down'
-        self.pending = []          # small queue of buffered key presses
-        self.body = [(SIZE, SIZE)]  # index 0 is the head
+        self.pending = []          
+        self.body = [(SIZE, SIZE)] 
         self.growing = 0
 
     @property
